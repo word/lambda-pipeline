@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: A test lambda function.
+Resources:
+  hello:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Description: Hello function
+      Runtime: python2.7
+      Handler: hello.lambda_handler
+      CodeUri: ./src
+      MemorySize: 128
+      Timeout: 3
+      Events:
+        HelloApi:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: GET
