@@ -3,7 +3,7 @@ phases:
   build:
     commands:
       - aws cloudformation package --template-file template.yaml --kms-key-id arn:aws:kms:eu-west-1:715895691008:key/8222137d-0253-420c-9e9c-bfdf722c3d73 --s3-bucket word-hello-bucket
-                                   --output-template-file output_template.yaml
+                                   --output-template-file output_template.yaml --debug
 artifacts:
   type: zip
   files:
