@@ -9,4 +9,3 @@ artifacts:
   files:
     - template.yaml
     - output_template.yaml
-
